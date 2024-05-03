@@ -1,0 +1,32 @@
+{
+  "name": "node-express-sqlite-rest-api",
+  "version": "1.0.0",
+  "description": "Node JS, Express Js , SQLite3 Database Build Rest API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/one-numan/node-express-sqlite3-stack.git"
+  },
+  "keywords": [
+    "nodejs",
+    "expressjs",
+    "sqlite3",
+    "rest-api"
+  ],
+  "author": "OneNuman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/one-numan/node-express-sqlite3-stack/issues"
+  },
+  "homepage": "https://github.com/one-numan/node-express-sqlite3-stack#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
