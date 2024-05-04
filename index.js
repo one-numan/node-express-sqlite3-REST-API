@@ -3,6 +3,13 @@ const express = require("express"); // Importing Modules Express JS
 
 const app = express(); // Create Express's Server App's Instance
 
+/** * API Version 1 */
+const v1Router = require("./api/v1/routes/emp");
+
+/* Middle Ware Define */
+app.use(express.json());
+app.use("/api/v1", v1Router.empRoutes);
+
 app.get("/", (req, res) => {
   // GET Route
   res.json({
