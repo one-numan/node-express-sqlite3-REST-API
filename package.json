@@ -18,6 +18,10 @@
   "bugs": {
     "url": "https://github.com/one-numan/node-express-sqlite3-stack/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/one-numan/node-express-sqlite3-REST-API.git"
+  },
   "homepage": "https://github.com/one-numan/node-express-sqlite3-stack#readme",
   "dependencies": {
     "express": "^4.19.2"

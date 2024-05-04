@@ -4,7 +4,7 @@
 
 ## Node JS , Express and SQLite3
 
-**_version_0.1.0_**
+**_version_1.0.1**
 
 <!-- ## Its [Name and URL](https://github.com/one-numan/django-RBAC-Employee-Management-System-With-API) _version1.0.1_ -->
 
