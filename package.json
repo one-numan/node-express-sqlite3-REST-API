@@ -1,7 +1,7 @@
 {
-  "name": "node-express-sqlite-rest-api",
-  "version": "1.0.0",
-  "description": "Node JS, Express Js , SQLite3 Database Build Rest API",
+  "name": "express-rest-api",
+  "version": "0.1.0",
+  "description": "Node JS, Express Js  Build Rest API",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -28,5 +28,8 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.0"
+  },
+  "directories": {
+    "doc": "docs"
   }
 }
