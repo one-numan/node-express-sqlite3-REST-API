@@ -12,7 +12,8 @@
 
 Building basic **Rest API** using Node JS , Express JS
 
-> In this version 0.1.0 , Its a **Boiler Plate** .
+> In this version 0.1.0 <br>
+> Its a **Boiler Plate** .
 > Write a minimal code if your for buidling api. you can clone this start work.
 
 ## Table of Contents (Optional)
@@ -22,54 +23,45 @@ If your README is long, add a table of contents to make it easy for users to fin
 - [About](#about)
 - [Installation](#installation)
 - [Run this Project](#run)
+- [Source Code](#source_code)
 
 ## About
 
+<a name='about'></a>
 | Project Name | Node JS , Express |
 | ------------ | ----------------- |
-| **Version**  | 0.1.0             |
+| **Version** | 0.1.0 |
 
 _Its a Very BASIC App as its Version_
 
 ---
 
-| Modules / Library Name | Version |
-| ---------------------- | ------- |
-| Node Js                | 18.16   |
-| Django                 | 4.2.8   |
-| Sqlite                 | 3.44    |
-| HTML                   | 5       |
-| CSS                    | 3       |
-| Bootsrap               | 5.2     |
+| Modules / Library Name     | Version |
+| -------------------------- | ------- |
+| Node Js                    | 18.16   |
+| Express JS                 | 4.19.2  |
+| Nodemon - Dev Dependencies | 3.0.1   |
 
 ## Installation
 
+<a name='installation'></a>
+
 - Clone this Repo
-- Install Python3
-- Installing Required Python Modules from File **Requirements.txt**
-  - Command `pip install -r requirements.txt`
-- Installed IDE like VSCode or Pycharm
+  - `git clone https://github.com/one-numan/node-express-sqlite3-REST-API.git`
+- Install Required Modules
+  - `npm install`
 
 ## Run this Project
 
-- I assumed the Clone and Set Every thing
-- ![image](https://github.com/one-numan/django-RBAC-Employee-Management-System-With-API/assets/48924562/09925aac-f20c-4d49-a66e-70993612b894)
-- This is the Project Directory
-  - May be your scared , But Don't worry
-- There is Folder **EmployeeManagementSystem**
-  - Go Inside this Folder their is File
-    - manage.py (its is like **Soul** of Your Project )
-    - Lets Run Command `python3 manage.py runserver`
-    - This Will Run Your Project in your Computer
-    - If Project is Running Successfully, You will get an URL of Project
-    - If Any Error , Don't Worry Troubleshoot that.
+<a name='run'></a>
 
-## Designing Architecture
+- 1 Ways | **Most Common Way**
+  - `npm run start`
+- 2 Way | **NodeMon**
+  - `nodemon node`
 
-<a name='pages'></a>
+## Source Code
 
-### Home Page
-
-![Installing Modules](/docs/screenshots/Installing_dependencies.png)
+<a name='source_code'></a>
 
 ![First Version Of API End Point](/docs/screenshots/api_endpoint1.png)
