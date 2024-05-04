@@ -7,10 +7,6 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/one-numan/node-express-sqlite3-stack.git"
-  },
   "keywords": [
     "nodejs",
     "expressjs",
