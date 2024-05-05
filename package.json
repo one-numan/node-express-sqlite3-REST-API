@@ -25,6 +25,7 @@
   "homepage": "https://github.com/one-numan/node-express-sqlite3-stack#readme",
   "dependencies": {
     "express": "^4.19.2",
+    "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {

@@ -1,7 +1,4 @@
-// const { query } = require("express");
-
-const { query } = require("express");
-
+const { open } = require("sqlite");
 const sqlite = require("sqlite3").verbose();
 
 const DB_FILE_NAME = "db.sqlite3";
@@ -19,18 +16,15 @@ async function db_check() {
 }
 
 async function db_check2() {
-  try {
-    db = await new sqlite.Database(DB_FILE_NAME);
-    return db;
-  } catch (err) {
-    console.log(err);
-    return err;
-  }
+  return open({
+    filename: DB_FILE_NAME,
+    driver: sqlite.Database,
+  });
 }
 
 async function getUsers() {
   const db = await db_check2();
-  console.log(db);
+  // console.log(db);
   try {
     d = await db.all("SELECT * FROM employee_V1 LIMIT 10");
     console.log(d);
@@ -68,22 +62,11 @@ async function db_getAll(
       return false;
     } else {
       console.log("Connected");
-      const query = `SELECT ${columns} FROM ${table_name} LIMIT ${limit}`;
-      const datac = await db.all(query);
-      // console.log(datac, "datac");
-
+      const query_str = `SELECT ${columns} FROM ${table_name} LIMIT ${limit}`;
+      const datac = await db.all(query_str);
+      console.log(datac);
+      console.log(typeof datac);
       return await datac;
-      // db.all(query, async (err, rows) => {
-      //   console.log(err, rows);
-      //   if (err) {
-      //     console.log(err);
-      //     return await false;
-      //   } else {
-      //     console.log("Send Data", rows);
-      //     return await rows;
-      //   }
-      // });
-      // return true;
     }
   });
 }
