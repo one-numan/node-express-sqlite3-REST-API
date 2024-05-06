@@ -15,7 +15,7 @@ empRoutes.get("/", async (req, res) => {
 */
 
 empRoutes.get("/", empController.listUsers);
-
+empRoutes.get("/:id", empController.getUser);
 empRoutes.get("/all", empController.empGetAll);
 
 exports.empRoutes = empRoutes;

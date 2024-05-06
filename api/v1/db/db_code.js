@@ -71,5 +71,22 @@ async function db_getAll(
   });
 }
 
+async function db_getone(table_name, id, columns = "*") {
+  //Check DB Connection
+
+  const db = await db_check2();
+  // console.log(db);
+  try {
+    d = await db.get(`SELECT * FROM ${table_name} WHERE id = ${id} `);
+    console.log(d);
+    return d;
+  } catch (err) {
+    return { issue: err };
+  } finally {
+    await db.close();
+  }
+}
+
 exports.db_getAll = db_getAll;
 exports.getUsers = getUsers;
+exports.db_getone = db_getone;

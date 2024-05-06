@@ -25,6 +25,19 @@ async function listUsers(req, res) {
     res.status(500).json({ error: "Internal server error" });
   }
 }
+
+async function getUser(req, res) {
+  try {
+    const id = req.params.id;
+    console.log(`Enter User ID ${id}`);
+    const users = await db_code.db_getone("employee_V1", id);
+    res.status(200).json(users);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+}
 exports.empGet = empGet;
 exports.empGetAll = empGetAll;
 exports.listUsers = listUsers;
+exports.getUser = getUser;
