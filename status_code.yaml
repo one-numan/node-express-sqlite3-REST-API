@@ -1,0 +1,32 @@
+# Informational (1xx)
+
+100: Continue
+
+# Successful (2xx)
+
+200: OK
+201: Created
+202: Accepted
+204: No Content
+
+# Redirection (3xx)
+
+301: Moved Permanently
+302: Found (Previously Moved Temporarily)
+303: See Other
+304: Not Modified
+
+# Client Errors (4xx)
+
+400: Bad Request
+401: Unauthorized
+403: Forbidden
+404: Not Found
+409: Conflict
+
+# Server Errors (5xx)
+
+500: Internal Server Error
+502: Bad Gateway
+503: Service Unavailable
+504: Gateway Timeout

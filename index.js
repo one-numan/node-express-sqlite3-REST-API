@@ -8,6 +8,7 @@ const v1Router = require("./api/v1/routes/emp");
 
 /* Middle Ware Define */
 app.use(express.json());
+app.use(express.urlencoded());
 app.use("/api/v1/emp", v1Router.empRoutes);
 
 app.get("/", (req, res) => {

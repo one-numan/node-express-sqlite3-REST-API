@@ -20,6 +20,6 @@ empRoutes.get("/:id", empController.getUser);
 empRoutes.get("/all", empController.empGetAll);
 
 // Under Construction
-empRoutes.post("/", empController.listUsers);
+empRoutes.post("/", empController.addEmp);
 
 exports.empRoutes = empRoutes;
