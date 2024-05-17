@@ -1,7 +1,8 @@
 const { open } = require("sqlite");
 const sqlite = require("sqlite3").verbose();
 
-const DB_FILE_NAME = "db.sqlite3";
+/** `@DB_FILE_NAME` : Path of SQLite3 Database File*/
+const DB_FILE_NAME = "./api/v1/db/db.sqlite3";
 
 async function db_check() {
   const db = await new sqlite.Database("db.sqlite3", (err) => {

@@ -11,6 +11,13 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use("/api/v1/emp", v1Router.empRoutes);
 
+/**
+ * Routes : Get Route of First Endpoint
+ * Resource : `/`
+ * EndPoint : `/`
+ * @param {Object} req The HTTP request Object
+ * @param {Object} res The HTTP resource Object
+ */
 app.get("/", (req, res) => {
   // GET Route
   res.json({
@@ -18,6 +25,13 @@ app.get("/", (req, res) => {
   });
 });
 
+/**
+ * Routes : Post Route of First Endpoint
+ * Resource : `/`
+ * EndPoint : `/`
+ * @param {Object} req The HTTP request Object
+ * @param {Object} res The HTTP resource Object
+ */
 app.post("/", (req, res) => {
   // POST Route
   res.json({
@@ -25,6 +39,13 @@ app.post("/", (req, res) => {
   });
 });
 
+/**
+ * Routes : Put Route of First Endpoint
+ * Resource : `/`
+ * EndPoint : `/`
+ * @param {Object} req The HTTP request Object
+ * @param {Object} res The HTTP resource Object
+ */
 app.put("/", (req, res) => {
   //PUT Route
   res.json({
@@ -32,6 +53,13 @@ app.put("/", (req, res) => {
   });
 });
 
+/**
+ * Routes : Patch Route of First Endpoint
+ * Resource : `/`
+ * EndPoint : `/`
+ * @param {Object} req The HTTP request Object
+ * @param {Object} res The HTTP resource Object
+ */
 app.patch("/", (req, res) => {
   //PATCH Route
   res.json({
@@ -39,10 +67,31 @@ app.patch("/", (req, res) => {
   });
 });
 
+/**
+ * Routes : Delete Route of First Endpoint
+ * Resource : `/`
+ * EndPoint : `/`
+ * @param {Object} req The HTTP request Object
+ * @param {Object} res The HTTP resource Object
+ */
 app.delete("/", (req, res) => {
   //DELETE Route
   res.json({
     httpRequest: "delete",
+  });
+});
+
+/**
+ * Routes : List Of All Available Api Version and Resouces
+ * Resource : `api`
+ * EndPoint : `/api/`
+ * @param {Object} req The HTTP request Object
+ * @param {Object} res The HTTP resource Object
+ */
+app.get("/api/", (req, res) => {
+  console.log(req);
+  res.json({
+    api_version: `${req.hostname}:8080/api/v1/emp`,
   });
 });
 
