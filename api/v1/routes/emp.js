@@ -1,22 +1,19 @@
 const express = require("express");
-const empRoutes = express.Router();
-
-// Controller
-const empController = require("../controller/emp");
 
 /**
- * 
-empRoutes.get("/", async (req, res) => {
-  data = await empController.empGetAll();
-  // console.log("Data Found");
-  res.send(data);
-});
-* 
-*/
+ * `empRoutes` is Router Object
+ * @resouces `/api/v1/emp/`
+ */
+const empRoutes = express.Router();
+
+/**
+ * `empController` contains Bussiness Logic Of Employees Operation
+ */
+const empController = require("../controller/emp");
 
 // Completed
-empRoutes.get("/", empController.listUsers);
-empRoutes.get("/:id", empController.getUser);
+empRoutes.get("/", empController.get_10_emp);
+empRoutes.get("/:id", empController.get_one);
 empRoutes.get("/all", empController.empGetAll);
 
 // Under Construction

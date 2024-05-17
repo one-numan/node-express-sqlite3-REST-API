@@ -49,6 +49,11 @@ function check_each_key(body) {
   return empty_keyValue;
 }
 
+/**
+ * Get All Entries from DB Users
+ * @param {Object} req
+ * @param {Object} res
+ */
 async function empGetAll(req, res) {
   try {
     data = await db_code.db_getAll("employee_V1", "*");
@@ -61,7 +66,12 @@ async function empGetAll(req, res) {
   }
 }
 
-async function listUsers(req, res) {
+/**
+ * List Of 10 Employees Users
+ * @param {Object} req
+ * @param {Object} res
+ */
+async function get_10_emp(req, res) {
   try {
     const users = await db_code.getUsers();
     res.status(200).json(users);
@@ -71,7 +81,12 @@ async function listUsers(req, res) {
   }
 }
 
-async function getUser(req, res) {
+/**
+ * Get One Entries from using `param:` id
+ * @param {Object} req
+ * @param {Object} res
+ */
+async function get_one(req, res) {
   try {
     const id = req.params.id;
     console.log(`Enter User ID ${id}`);
@@ -113,10 +128,6 @@ async function addEmp(req, res) {
   // console.log(req.body.length);
   res.status(200).json({ status: 200 });
 }
-// exports.empGet = empGet;
-// exports.empGetAll = empGetAll;
-// exports.listUsers = listUsers;
-// exports.getUser = getUser;
 
 // Exporting all Function in JS
-module.exports = { empGet, empGetAll, listUsers, getUser, addEmp };
+module.exports = { empGet, empGetAll, get_10_emp, get_one, addEmp };

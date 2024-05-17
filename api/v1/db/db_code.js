@@ -82,15 +82,23 @@ async function db_getAll(
   });
 }
 
+/**
+ * Fetching One Entries from Database
+ * @param {String} table_name
+ * @param {integer} id
+ * @param {String,Arrray} columns
+ * @returns data or any Error
+ */
 async function db_getone(table_name, id, columns = "*") {
   //Check DB Connection
 
   const db = await db_check2();
   // console.log(db);
   try {
-    d = await db.get(`SELECT * FROM ${table_name} WHERE id = ${id} `);
-    console.log(d);
-    return d;
+    const data = await db.get(`SELECT * FROM ${table_name} WHERE id = ${id} `);
+    // console.log(d);
+    console.log("Data Fetch | Done SuccessFully");
+    return data;
   } catch (err) {
     return { issue: err };
   } finally {
