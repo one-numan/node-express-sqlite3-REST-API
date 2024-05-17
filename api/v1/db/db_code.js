@@ -46,6 +46,16 @@ function db_close() {
   });
 }
 
+/**
+ * Getting Employee Entries from DB
+ * @param {*} table_name
+ * @param {*} columns
+ * @param {*} where
+ * @param {*} extra
+ * @param {*} limit
+ * @param {*} offset
+ */
+// Getting All DataBase Query With Limit 10 Offset 0
 async function db_getAll(
   table_name,
   columns = "*",

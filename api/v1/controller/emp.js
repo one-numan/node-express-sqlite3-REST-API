@@ -109,7 +109,6 @@ async function addEmp(req, res) {
   }
 
   // Case 3 : Inserting Into DB
-  
 
   // console.log(req.body.length);
   res.status(200).json({ status: 200 });
