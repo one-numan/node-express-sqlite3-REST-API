@@ -5,6 +5,14 @@ function empGet() {
   return data;
 }
 
+/**
+ * Checking All Required is send through request.body
+ * @param {Object} body Request.body
+ * @returns {bool} `true` / `false`
+ *
+ * If No Error Return `true`
+ * If Error Return `false`
+ */
 function check_each_key(body) {
   console.log(body);
 
@@ -20,7 +28,6 @@ function check_each_key(body) {
   "dept_id": 0,
   "role_id": 0
 }
-
    * 
    */
   let empty_keyValue = {
@@ -98,7 +105,23 @@ async function get_one(req, res) {
   }
 }
 
-async function addEmp(req, res) {
+/**
+ * Adding New Emp
+ * @param {Object} req
+ * @param {Object} res
+ * @returns {Object} `Status_code` and `Message`
+ *
+ * Logic Flow
+ * - Taking Input from Request.body
+ * - Check Data If Everything is Correct Send  status_code `200` Otherwise send `400`
+ *
+ * In Depth Corner Case :
+ * 1. Case 1: No text In Body
+ * 2. Case 2 : May Be Some Key and Values is Missing
+ * 3. Case 3 : Inserting Into DB
+ * Done
+ */
+async function add_emp(req, res) {
   console.log("Request body :", req.body);
   if (!Object.keys(req.body).length) {
     // Case 1: No text In Body
@@ -130,4 +153,4 @@ async function addEmp(req, res) {
 }
 
 // Exporting all Function in JS
-module.exports = { empGet, empGetAll, get_10_emp, get_one, addEmp };
+module.exports = { empGet, empGetAll, get_10_emp, get_one, add_emp };

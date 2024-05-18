@@ -17,6 +17,6 @@ empRoutes.get("/:id", empController.get_one);
 empRoutes.get("/all", empController.empGetAll);
 
 // Under Construction
-empRoutes.post("/", empController.addEmp);
+empRoutes.post("/", empController.add_emp);
 
 exports.empRoutes = empRoutes;
